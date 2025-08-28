@@ -1,6 +1,6 @@
 # Quantum-Tech : Web-Application Vulnerability Scanner
 
-## ----- Tool's & Technologies -----
+## ***** Tool's & Technologies *****
 
 ### >>> Programming-Language : Python 3
 
@@ -27,3 +27,29 @@
 
 ### >>> SSTI (Vulnerability) Tool :
 #### - Python (Script) : Build, an Custom (PYTHON-SCRIPT) to Enumerate SSTI-Vulnerability.
+
+## ***** Pre-Requisite ******
+
+### >>> Go (Progeamming-Language)
+
+### >>> subfinder
+#### ▶ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+### >>> httpx
+#### ▶ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+### >>> katana
+#### ▶ go install -v github.com/projectdiscovery/katana/cmd/katana@latest
+
+### >>> waybackurls
+#### ▶ go install -v github.com/tomnomnom/waybackurls@latest
+
+### >>> anew
+#### ▶ go install -v github.com/tomnomnom/anew@latest
+
+### >>> gxss & kxss
+#### ▶ go install -v github.com/KathanP19/Gxss@latest
+#### ▶ go install -v github.com/Emoe/kxss@latest
+
+### >>> qsreplace 
+#### ▶ go install github.com/tomnomnom/qsreplace@latest
