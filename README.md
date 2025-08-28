@@ -1,7 +1,5 @@
 # Quantum-Tech : Web-Application Vulnerability Scanner
 
-## To, Run (Quantum-Tech) : python Quantum-Tech.py
-
 ## ***** Tool's & Technologies *****
 
 ### >>> Kali-Linux (Operating-System)
@@ -57,3 +55,13 @@
 
 ### >>> QS-REPLACE :
 #### ▶ go install github.com/tomnomnom/qsreplace@latest
+
+## Screen-Shot : 
+
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-25-30" src="https://github.com/user-attachments/assets/dd314c53-5634-4aa2-8b2d-adc48fc0d180" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-25-47" src="https://github.com/user-attachments/assets/144b2a1c-04bc-430d-b20c-4602c6bd52ed" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-26-04" src="https://github.com/user-attachments/assets/27d39551-a450-4226-b66f-48ba0ea6a1e0" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-26-26" src="https://github.com/user-attachments/assets/b5b43f54-4d76-48cc-b52b-645cd9dc05f4" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-27-16" src="https://github.com/user-attachments/assets/b92291e3-80b1-44fe-b9ac-83fed63ff720" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-28-36" src="https://github.com/user-attachments/assets/01bea2b3-f587-460c-8106-1d5edc2c0cc3" />
+<img width="1920" height="1044" alt="Screenshot_2025-08-28_22-28-47" src="https://github.com/user-attachments/assets/dee5184d-428e-41c6-a545-747aec02af22" />
