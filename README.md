@@ -1,6 +1,10 @@
 # Quantum-Tech : Web-Application Vulnerability Scanner
 
+## To, Run (Quantum-Tech) : python Quantum-Tech.py
+
 ## ***** Tool's & Technologies *****
+
+### >>> Kali-Linux (Operating-System)
 
 ### >>> Programming-Language : Python 3
 
@@ -13,43 +17,43 @@
 #### - Anew : This tool is frequently used in cybersecurity and penetration testing workflows, particularly for managing lists of unique domains or subdomains during reconnaissance.
 #### - Qsreplace : Replaces query parameters with payloads for quick testing.
 
-### >>> XSS (Vulnerability) Tool :
+## >>> XSS (Vulnerability) Tool :
 #### - GXSS & KXSS : Identifies reflected parameters vulnerable to XSS.
 
-### >>> SQL-i (Vulnerability) Tool :
+## >>> SQL-i (Vulnerability) Tool :
 #### - Sql-Map : dentifies reflected parameters vulnerable to XSS.
 
-### >>> LFI (Vulnerability) Tool :
+## >>> LFI (Vulnerability) Tool :
 #### - Python (Script) : Build, an Custom (PYTHON-SCRIPT) to Enumerate LFI-Vulnerability.
 
-### >>> SSRF (Vulnerability) Tool : 
+## >>> SSRF (Vulnerability) Tool : 
 #### - Python (Script) : Build, an Custom (PYTHON-SCRIPT) to Enumerate SSRF-Vulnerability.
 
-### >>> SSTI (Vulnerability) Tool :
+## >>> SSTI (Vulnerability) Tool :
 #### - Python (Script) : Build, an Custom (PYTHON-SCRIPT) to Enumerate SSTI-Vulnerability.
 
 ## ***** Pre-Requisite ******
 
 ### >>> Go (Progeamming-Language)
 
-### >>> subfinder
+### >>> SUB-FINDER :
 #### ▶ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 
-### >>> httpx
+### >>> HTTPX :
 #### ▶ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-### >>> katana
+### >>> KATANA : 
 #### ▶ go install -v github.com/projectdiscovery/katana/cmd/katana@latest
 
-### >>> waybackurls
+### >>> WAUBACKURLS :
 #### ▶ go install -v github.com/tomnomnom/waybackurls@latest
 
-### >>> anew
+### >>> ANEW : 
 #### ▶ go install -v github.com/tomnomnom/anew@latest
 
-### >>> gxss & kxss
+### >>> GXSS & KXSS : 
 #### ▶ go install -v github.com/KathanP19/Gxss@latest
 #### ▶ go install -v github.com/Emoe/kxss@latest
 
-### >>> qsreplace 
+### >>> QS-REPLACE :
 #### ▶ go install github.com/tomnomnom/qsreplace@latest
