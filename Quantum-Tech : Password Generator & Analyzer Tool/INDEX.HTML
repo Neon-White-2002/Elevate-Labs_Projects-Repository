@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- PAGE-TITLE -->
+        <title>Quantum-Tech : Password Generator & Analyzer !</title>
+
+        <!-- CSS (sTYLE-SHEET) -->
+        <link rel="stylesheet" href="STYLE.CSS">
+
+        <!-- PAGE-LOGO -->
+        <link rel="icon" href="IMAGES/page-logo.png" type="img/icon">
+
+        <!-- FONT-AWESOME (CDN) -->
+        <script src="https://kit.fontawesome.com/4712b32a59.js" crossorigin="anonymous"></script>
+
+        <!-- MAIN-PAGE (JAVA-SCRIPT) -->
+        <script src="JAVA-SCRIPT/SCRIPT.JS" defer></script>
+    </head>
+    
+    <body>
+        <!-- MAIN-PAGE -->
+        <!-- QUANTUM-TECH : PASSWORD (MENU) -->
+        <div class="password-menu-container">
+            <!-- PASSWORD-GENERATOR -->
+            <div class="password-generator-button" id="password-generator-button">
+                <!-- IMAGE -->
+                <div class="image">
+                    <img src="IMAGES/password-generator.png" alt="">
+                </div>
+                <!-- TEXT -->
+                <div class="text">
+                    <span># Generate, New-Password ...</span>
+                    <p>PASSWORD, GENERATOR !</p>
+                </div>
+            </div>
+
+            <!-- DIVIDER -->
+            <div class="divider-line"></div>
+
+            <!-- PASSWORD-ANAYLZER -->
+            <div class="password-analyzer-button" id="password-analyzer-button">
+                <!-- IMAGE -->
+                <div class="image">
+                    <img src="IMAGES/password-check-and-analyzer.png" alt="">
+                </div>
+                <!-- TEXT -->
+                <div class="text">
+                    <span># Analyze, Old-Password ...</span>
+                    <p>PASSWORD, ANALYZER !</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PASSWORD-GENERATOR -->
+        <div class="password-generator-container">
+            <!-- HEADER -->
+            <div class="header-text">
+                <!-- BACK-BUTTON -->
+                <div class="back-button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+
+                <!-- ICON -->
+                <i class="fa-solid fa-key"></i>
+                <!-- TEXT -->
+                <p># PASSWORD, GENERATOR !</p>
+            </div>
+            
+            <!-- WRAPPER -->
+            <div class="wrapper">
+                <!-- INPUT-BOX -->
+                <div class="input-box">
+                    <!-- INPUT -->
+                    <input type="text" name="" id="" disabled>
+                    <!-- COPY-BUTTON -->
+                    <div class="copy-button">
+                        <i class="fa-solid fa-copy"></i>
+                    </div>
+                    <!-- ALERT-MESSAGE -->
+                    <span class="alter-message">e7_5y^BmArJlo*WQDOx~y@-5a</span>
+                </div>
+
+                <!-- PASSWORD-INDICATOR -->
+                <div class="password-indicator"></div>
+
+                <!-- PASSWORD-LENGTH -->
+                <div class="password-length">
+                    <!-- DETAILS -->
+                    <div class="details">
+                        <label for="" class="title"># PASSWORD-LENGTH :</label>
+                        <span>15</span>
+                    </div>
+
+                    <!-- PASSWORD-LENGTH (RANGE) -->
+                    <input type="range" name="" id="" min="1" max="30" value="15" step="1">
+                </div>
+
+                <!-- PASSWORD-SETTINGS -->
+                <div class="password-settings">
+                    <label for="" class="title"># PASSWORD-SETTINGS :</label>
+                    <!-- PASSWORD-SETTINGS (OPTIONS) -->
+                    <ul class="options">
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="lower_case" checked>
+                            <label for="lower_case">Lower-Case (a-z)</label>
+                        </li>
+
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="upper_case">
+                            <label for="upper_case">Upper-Case (A-Z)</label>
+                        </li>
+
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="numbers">
+                            <label for="numbers">Number's (0-9)</label>
+                        </li>
+
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="symbols">
+                            <label for="symbols">Symbol's (!@#$%^&*)</label>
+                        </li>
+
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="exclude_duplicate">
+                            <label for="exclude_duplicate">Ex-clude Duplicate's</label>
+                        </li>
+
+                        <!-- OPTION -->
+                        <li class="option">
+                            <input type="checkbox" name="" id="spaces">
+                            <label for="spaces">Include-Spaces</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- PASSWORD-GENERATOR (BUTTON) -->
+                <button class="password-generate-button">
+                    # GENERATE-PASSWORD !
+                </button>
+            </div>
+        </div>
+
+        <!-- PASSWORD-ANALYZER -->
+        <div class="password-analyzer-container">
+            <!-- HEADER -->
+            <div class="header-text">
+                <!-- BACK-BUTTON -->
+                <div class="back-button">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+
+                <!-- ICON -->
+                <i class="fa-solid fa-unlock"></i>
+                <!-- TEXT -->
+                <p># PASSWORD, ANALYZER !</p>
+            </div>
+            
+            <!-- WRAPPER -->
+            <div class="wrapper">
+                <!-- INPUT-BOX -->
+                <div class="input-box">
+                    <!-- INPUT -->
+                    <input type="password" name="" id="password-analyzer-input-box">
+                    <!-- COPY-BUTTON -->
+                    <div class="copy-button">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <!-- ALERT-MESSAGE -->
+                    <span class="alter-message">ENTER, YOUR PASSWORD !</span>
+                </div>
+
+                <!-- PASSWORD-INDICATOR -->
+                <div class="password-indicator"></div>
+
+                <!-- PASSWORD-SETTINGS -->
+                <div class="password-settings">
+                    <!-- JAVA-SCRIPT -->
+                </div>
+
+                <!-- PASSWORD-ANALYZER (BUTTON) -->
+                <button class="password-analyzing-button">
+                    # ANALYZE-PASSWORD !
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
