@@ -1,0 +1,540 @@
+/* ***** STYLE-SHEET (INDEX-PAGE) ***** */
+/* GOOGLE-FONT */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* STYLE-SHEET */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    letter-spacing: 0.05rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.5s ease;
+}
+
+/* ANIMATIONS (STYLE-SHEET) */
+@keyframes shake {
+    0%, 100% {
+        transform: scale(1.0);
+    }
+
+    25% {
+        transform: rotate(10deg) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(-10deg) scale(1.05);
+    }
+}
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-2.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveright {
+    0% {
+        transform: translateX(10.5rem);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        transform: scale(0.75);
+    }
+
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+/* PAGE (BODY) */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #F5F5F5;
+    transition: 0.5s ease-in-out;
+}
+
+/* PASSWORD-BUTTONS (MENU) */
+.password-menu-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PASSSWORD GENERATOR & PASSWORD ANALYZER (BUTTON) */
+.password-menu-container .password-generator-button,
+.password-menu-container .password-analyzer-button {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.05rem;
+    padding: 1.15rem 1.15rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: all 1.5s ease-in-out;
+    animation: fade-in 1.5s forwards ease-in-out;
+}
+
+.password-menu-container .password-generator-button {
+    background: linear-gradient(90deg, #0D1164, #640D5F, #EA2264);
+}
+
+.password-menu-container .password-analyzer-button {
+    background: linear-gradient(90deg, #3B060A, #8A0000, #C83F12);
+}
+
+.password-menu-container .password-generator-button .image,
+.password-menu-container .password-analyzer-button .image {
+    width: 3.0rem;
+    height: 3.0rem;
+    object-fit: cover;
+}
+
+.password-menu-container .password-generator-button .image img,
+.password-menu-container .password-analyzer-button .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0rem 0rem 0.3rem rgba(0, 0, 0, 0.5));
+}
+
+.password-menu-container .password-generator-button .text,
+.password-menu-container .password-analyzer-button .text {
+    width: calc(100% - 3.7rem);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.password-menu-container .password-generator-button .text span,
+.password-menu-container .password-analyzer-button .text span {
+    font-size: 0.80rem;
+    font-weight: 500;
+    color: #C4C4C4;
+}
+
+.password-menu-container .password-generator-button .text p,
+.password-menu-container .password-analyzer-button .text p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #F5F5F5;
+}
+
+.password-menu-container .password-generator-button:hover,
+.password-menu-container .password-analyzer-button:hover {
+    transform: translateY(-0.7rem) scale(1.05);
+    box-shadow: 0rem 0rem 0.7rem rgba(0, 0, 0, 0.5);
+}
+
+.password-menu-container .password-generator-button:hover .image img,
+.password-menu-container .password-analyzer-button:hover .image img {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.password-menu-container .password-generator-button:hover .text span,
+.password-menu-container .password-analyzer-button:hover .text span {
+    animation: movedown 1.5s ease-in-out forwards;
+}
+
+.password-menu-container .password-generator-button:hover .text p,
+.password-menu-container .password-analyzer-button:hover .text p {
+    animation: moveright 1.5s ease-in-out forwards;
+    font-weight: 700;
+}
+
+/* DIVIDER-LINE */
+.password-menu-container .divider-line {
+    width: auto;
+    height: 30%;
+    margin: 0 5.5rem;
+    transform: rotate(10deg);
+    border-left: 0.15rem solid #C4C4C4;
+}
+
+/* PASSWORD-GENERATOR (CONTAINER) */
+.password-generator-container,
+.password-analyzer-container {
+    width: 35rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.3);
+    transition: password-generator-container 0.5s ease-in-out;
+    animation: fade-in 1.5s ease-in-out forwards;
+    display: none;
+}
+
+.password-generator-container .header-text,
+.password-analyzer-container .header-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    padding: 1.05rem 1.05rem;
+    box-shadow: 0rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+}
+
+/* BACK-BUTTON */
+.password-generator-container .header-text .back-button,
+.password-analyzer-container .header-text .back-button {
+    position: absolute;
+    top: 50%;
+    left: -13.5%;
+    transform: translateY(-50%);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.95rem 0.95rem;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.password-generator-container .header-text .back-button i,
+.password-analyzer-container .header-text .back-button i {
+    font-size: 1.35rem;
+    color: #333;
+    transition: 0.5s ease-in-out;
+}
+
+.password-generator-container .header-text .back-button:hover i,
+.password-analyzer-container .header-text .back-button:hover i {
+    animation: moveright 1.5s infinite ease-in-out;
+}
+
+.password-generator-container .header-text .image,
+.password-analyzer-container .header-text .image {
+    width: 3.0rem;
+    height: 3.0rem;
+    object-fit: cover;
+}
+
+.password-generator-container .header-text .image img,
+.password-analyzer-container .header-text .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.5));
+}
+
+.password-generator-container .header-text i {
+    font-size: 2.5rem;
+    color: transparent;
+    background: linear-gradient(to left, #0D1164, #640D5F, #EA2264);
+    background-clip: text;
+}
+
+.password-analyzer-container .header-text i {
+    font-size: 2.5rem;
+    color: transparent;
+    background: linear-gradient(to left, #3B060A, #8A0000, #C83F12);
+    background-clip: text;
+}
+
+.password-generator-container .header-text p,
+.password-analyzer-container .header-text p {
+    font-size: 1.30rem;
+    font-weight: 700;
+    color: #333;
+}
+
+/* WRAPPER */
+.password-generator-container .wrapper,
+.password-analyzer-container .wrapper {
+    padding: 1.25rem 1.75rem;
+    margin: 0.5rem 0rem;
+}
+
+.password-generator-container .wrapper .input-box,
+.password-analyzer-container .wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.15rem 0.15rem rgba(0, 0, 0, 0.3);
+}
+
+.password-generator-container .wrapper .input-box input,
+.password-analyzer-container .wrapper .input-box input {
+    width: calc(100% - 3.0rem);
+    height: 3.5rem;
+    padding: 0rem 1.05rem;
+    color: #333;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    background: #F5F5F5;
+}
+
+.password-generator-container .wrapper .input-box .copy-button,
+.password-analyzer-container .wrapper .input-box .copy-button {
+    width: 3.0rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background: #C4C4C4;
+}
+
+.password-generator-container .wrapper .input-box .copy-button i,
+.password-analyzer-container .wrapper .input-box .copy-button i {
+    font-size: 1.45rem;
+    color: #333;
+}
+
+.password-generator-container .wrapper .input-box .alter-message,
+.password-analyzer-container .wrapper .input-box .alter-message {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0rem 1.05rem;
+    transform: translateY(-50%);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #C4C4C4;
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+/* PASSWORD-INDICATOR */
+.password-generator-container .wrapper .password-indicator,
+.password-analyzer-container .wrapper .password-indicator {
+    position: relative;
+    width: 100%;
+    height: 0.25rem;
+    margin: 0.95rem 0rem;
+    border-radius: 0.5rem;
+    background: #D4DBE5;
+}
+
+.password-generator-container .wrapper .password-indicator::before,
+.password-analyzer-container .wrapper .password-indicator::before {
+    position: absolute;
+    content: "";
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.password-generator-container .wrapper .password-indicator#weak::before,
+.password-analyzer-container .wrapper .password-indicator#weak::before {
+    width: 20%;
+    background: #FF3E36;
+}
+
+.password-generator-container .wrapper .password-indicator#medium::before,
+.password-analyzer-container .wrapper .password-indicator#medium::before {
+    width: 50%;
+    background: #F1C80B;
+}
+
+.password-generator-container .wrapper .password-indicator#strong::before,
+.password-analyzer-container .wrapper .password-indicator#strong::before {
+    width: 100%;
+    background: #4CD137;
+}
+
+/* PASSWORD-LENGTH */
+.password-generator-container .wrapper .password-length {
+    margin: 1.5rem 0rem;
+}
+
+.password-generator-container .wrapper .password-length .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #333;
+    font-weight: 700;
+    gap: 0.35rem;
+}
+
+.password-generator-container .wrapper .password-length .details span {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.password-generator-container .wrapper .password-length input[type="range"] {
+  width: 100%;
+  height: 0.3rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background: linear-gradient(90deg, #0D1164, #640D5F, #EA2264) no-repeat;
+  background-size: 0% 100%;
+  background-color: #D4DBE5;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.password-generator-container .wrapper .password-length input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.3rem;
+  border-radius: 0.5rem;
+  background: transparent; 
+}
+
+.password-generator-container .wrapper .password-length input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: #FFF; 
+  border: 0.15rem solid #0D1164;
+  margin-top: -0.35rem;
+  cursor: pointer;
+}
+
+/* PASSWORD-SETTINGS */
+.password-generator-container .wrapper .password-settings label.title,
+.password-analyzer-container .wrapper .password-settings label.title {
+   font-weight: 700;
+   color: #333;
+}
+
+.password-generator-container .wrapper .password-settings .options,
+.password-analyzer-container .wrapper .password-settings .options {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #333;
+    margin: 0.5rem 0rem;
+}
+
+.password-generator-container .wrapper .password-settings .options .option,
+.password-analyzer-container .wrapper .password-settings .options .option {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.35rem 0rem;
+    gap: 0.35rem;
+}
+
+.password-generator-container .wrapper .password-settings .options .option:first-child {
+    pointer-events: none;
+}
+
+.password-generator-container .wrapper .password-settings .options .option input[type="checkbox"] {
+    width: 1.05rem;
+    height: 1.05rem;
+    cursor: pointer;
+    accent-color: #0D1164;
+    cursor: pointer;
+}
+
+.password-analyzer-container .wrapper .password-settings .options .option .condition-icon {
+   width: 1.05rem;
+   height: 1.05rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.password-analyzer-container .wrapper .password-settings .options .option .condition-icon i.fa-circle-check {
+    font-size: 1.25rem;
+    color: #4CD137;
+}
+
+.password-analyzer-container .wrapper .password-settings .options .option .condition-icon i.fa-circle-xmark {
+    font-size: 1.25rem;
+    color: #FF3E36;
+}
+
+.password-generator-container .wrapper .password-settings .options .option label,
+.password-analyzer-container .wrapper .password-settings .options .option label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.password-analyzer-container .wrapper .password-settings .options .option label.condition-yes {
+    color: #4CD137;
+    font-weight: 500;
+}
+
+.password-analyzer-container .wrapper .password-settings .options .option label.condition-no {
+    color: #FF3E36;
+    font-weight: 500;
+}
+
+/* PASSWORD-GENERATE-BUTTON */
+.password-generator-container .wrapper .password-generate-button,
+.password-analyzer-container .wrapper .password-analyzing-button {
+    width: 100%;
+    height: auto;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #FFF;
+    margin: 1.05rem 0rem 0rem 0rem;
+    border-radius: 0.5rem;
+    padding: 0.95rem 0rem;
+    box-shadow: 0rem 0rem 0.35rem rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #0D1164, #640D5F, #EA2264);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.password-analyzer-container .wrapper .password-analyzing-button {
+    background: linear-gradient(90deg, #3B060A, #8A0000, #C83F12);
+}
+
+.password-generator-container .wrapper .password-generate-button:hover {
+    transform: scale(1.015);
+    background: linear-gradient(170deg, #EA2264, #640D5F, #0D1164);
+}
+
+.password-analyzer-container .wrapper .password-analyzing-button:hover {
+    transform: scale(1.015);
+    background: linear-gradient(170deg, #C83F12, #8A0000, #3B060A);
+}
